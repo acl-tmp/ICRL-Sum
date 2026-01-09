@@ -112,17 +112,23 @@ Control model behavior via `configs/model.yaml`:
 
 ```yaml
 remote_llm:
-  active_provider: "openai" # Options: "openai", "google"
+  active_provider: "openai"
   openai:
     model_name: "gpt-5"
     temperature: 0.2
 
-local_vlm:
-  model_path: "/path/to/local/Qwen2.5-VL"
-  quantization: "bf16"
+# Visual evidence is textualized by a multimodal model (Gemini)
+visual_captioner:
+  active_provider: "google"
+  google:
+    model_name: "gemini"   # paper: Gemini multimodal model (no exact version specified)
 
+# Evidence embeddings used for retrieval
 embeddings:
-  text_encoder: "sentence-transformers/all-mpnet-base-v2"
+  active_provider: "openai"
+  openai:
+    model_name: "text-embedding-3-large"
+
 ```
 
 ---
