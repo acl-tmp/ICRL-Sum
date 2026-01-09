@@ -1,9 +1,8 @@
 # ICRL-Sum: In-Context Reinforcement Learning for Grounded Video Summarization
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Review-only](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c)](https://pytorch.org/)
-[![Paper](https://img.shields.io/badge/Paper-ArXiv-green)](https://arxiv.org/)
 
 **Official implementation of "ICRL-Sum: In-Context Reinforcement Learning for Grounded Video Summarization".**
 
