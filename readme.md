@@ -165,4 +165,4 @@ If you find this code useful for your research, please cite our paper:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This repository is provided for anonymous peer review purposes only. All rights reserved. Redistribution or reuse is not permitted without the authors’ permission.
