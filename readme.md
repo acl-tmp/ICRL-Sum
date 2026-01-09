@@ -129,13 +129,12 @@ embeddings:
 
 ## 📊 Performance
 
-| Method          | ROUGE-L | BERTScore | Grounding (NLI) | tIoU |
-|----------------|--------:|----------:|----------------:|-----:|
-| ZeroShot-VLLM  | 32.5    | 84.1      | 0.65            | 0.42 |
-| V2Xum-LLM      | 34.1    | 85.2      | 0.68            | 0.45 |
-| ICRL-Sum (Ours)| 38.4    | 87.9      | 0.82            | 0.61 |
+| Method | ROUGE-L | BERTScore | FactVC | Schema Val. |
+| :--- | :--- | :--- | :--- | :--- |
+| **ZeroShot-VLLM** | 32.42 | 82.92 | 60.31 | 0.62 |
+| **V2Xum-LLAMA** | 38.63 | 81.48 | 47.80 | 0.71 |
+| **ICRL-Sum (Ours)** | **38.44** | **82.45** | **63.55** | **0.930** |
 
-(Results based on ICRL-SumBench, $K_{max}=3$)
 
 ---
 
