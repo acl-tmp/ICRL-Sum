@@ -61,18 +61,7 @@ export OPENAI_API_KEY="sk-proj-xxxxxxxxxxxxxxxxxxxxxxxx"
 export GOOGLE_API_KEY="AIzaSyD-xxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
-### 3) API Keys Setup
 
-This project requires access to remote LLMs for the reasoning module. Export your keys:
-
-```bash
-export OPENAI_API_KEY="sk-proj-xxxxxxxxxxxxxxxxxxxxxxxx"
-export GOOGLE_API_KEY="AIzaSyD-xxxxxxxxxxxxxxxxxxxxxxxx"
-```
-
-Alternatively, configure them in `configs/model.yaml`.
-
----
 
 ## ⚡ Quick Start
 
@@ -125,7 +114,7 @@ Control model behavior via `configs/model.yaml`:
 remote_llm:
   active_provider: "openai" # Options: "openai", "google"
   openai:
-    model_name: "gpt-4o"
+    model_name: "gpt-5"
     temperature: 0.2
 
 local_vlm:
