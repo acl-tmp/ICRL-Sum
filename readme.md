@@ -42,8 +42,8 @@ icrl/
 
 ## 🛠️ Installation & Environment
 
-### 1) Prerequisites
-
+### 1) Installation
+```bash
 # 1. Install System Tools (FFmpeg is required)
 sudo apt-get update && sudo apt-get install -y ffmpeg
 
@@ -53,18 +53,12 @@ conda activate icrl
 
 # 3. Install Dependencies
 pip install -r requirements.txt
-
-### 2) Python Environment
+```
+### 2) API Keys Setup
 
 ```bash
-conda create -n icrl python=3.10
-conda activate icrl
-
-# 1. Install PyTorch (adjust CUDA version as needed)
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-
-# 2. Install dependencies
-pip install -r requirements.txt
+export OPENAI_API_KEY="sk-proj-xxxxxxxxxxxxxxxxxxxxxxxx"
+export GOOGLE_API_KEY="AIzaSyD-xxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
 ### 3) API Keys Setup
