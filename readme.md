@@ -44,14 +44,15 @@ icrl/
 
 ### 1) Prerequisites
 
-- **OS**: Linux (Recommended Ubuntu 20.04/22.04)
-- **GPU**: NVIDIA GPU with at least **24GB VRAM** (for Qwen2.5-VL-7B local inference)
-- **System Tools**: `ffmpeg` is required for audio/video processing
-
-```bash
-# Install FFmpeg
+# 1. Install System Tools (FFmpeg is required)
 sudo apt-get update && sudo apt-get install -y ffmpeg
-```
+
+# 2. Set up Python Environment
+conda create -n icrl python=3.10
+conda activate icrl
+
+# 3. Install Dependencies
+pip install -r requirements.txt
 
 ### 2) Python Environment
 
