@@ -123,7 +123,7 @@ remote_llm:
 visual_captioner:
   active_provider: "google"
   google:
-    model_name: "gemini"   # paper: Gemini multimodal model (no exact version specified)
+    model_name: "gemini"   
 
 # Evidence embeddings used for retrieval
 embeddings:
