@@ -4,22 +4,24 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c)](https://pytorch.org/)
 
-**Official implementation of "ICRL-Sum: In-Context Reinforcement Learning for Grounded Video Summarization".**
+**Official (anonymized) implementation of "ICRL-Sum: In-Context Reinforcement Learning for Grounded Video Summarization".** :contentReference[oaicite:3]{index=3}
 
-**ICRL-Sum** is a training-free, inference-time optimization framework designed to generate grounded, coherent, and aligned video summaries. It leverages a hybrid architecture combining local multimodal perception ("The Eye") with remote large language model reasoning ("The Brain"), orchestrated by a reward-driven critic mechanism.
+**ICRL-Sum** is a structure-aware, training-free **inference-time optimization** framework for video summarization. With model parameters frozen, it represents the summary as a **structured Schema** and performs **closed-loop iterative refinement** driven by Critic rewards and evidence-retrieval feedback to improve spatio-temporal alignment, event coherence, and hallucination grounding—without any parameter updates. :contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5}
 
 ---
 
 ## 🚀 Key Features
 
-- **Training-Free Optimization**: No parameter fine-tuning required; leverages In-Context Reinforcement Learning.
-- **Hybrid Architecture**:
-  - **The Eye (Local)**: GPU-accelerated visual perception using **Qwen2.5-VL** and **Wav2Vec 2.0**.
-  - **The Brain (Remote)**: Cognitive reasoning via **GPT-4o/5** or **Gemini 1.5 Pro**.
-- **Critic-Guided Retrieval**: A closed-loop system where a "Critic" detects hallucinations and triggers semantic retrieval from a vector database (FAISS).
-- **Structured Evaluation**: Includes `ICRL-SumBench` metrics for Spatio-Temporal Alignment (tIoU) and Factual Grounding (NLI).
-
----
+- **Training-Free, Inference-Time Optimization**: Reformulates video summarization as an inference-time closed-loop optimization process (no fine-tuning). :contentReference[oaicite:6]{index=6}:contentReference[oaicite:7]{index=7}
+- **Three-Stage Pipeline**: (1) multimodal perception & segmentation, (2) window-level ICRL iterative loop, and (3) dynamic Schema evolution with terminal memory. :contentReference[oaicite:8]{index=8}
+- **Unified Backbone LLM (GPT-5)**: Uses **GPT-5** as the unified backbone, instantiating both the Base-LLM (Schema generation) and Feedback-LLM (instruction/feedback generation) via customized system prompts. :contentReference[oaicite:9]{index=9}
+- **Textualized Multimodal Evidence Construction**:
+  - **ASR**: Extracts high-precision transcripts with **Whisper-large-v3**.
+  - **Visual Evidence**: Converts shot-detected keyframes into textual descriptions via a **Gemini multimodal model**. :contentReference[oaicite:10]{index=10}:contentReference[oaicite:11]{index=11}
+- **Critic-Guided Retrieval & Feedback Loop**: A Reward Critic evaluates candidates along **alignment / coherence / grounding**, triggers targeted evidence retrieval, and injects feedback to steer the next refinement step. :contentReference[oaicite:12]{index=12}
+- **Evidence Embedding & Retrieval Backend**: Maps textualized evidence into dense vectors using **text-embedding-3-large** and indexes them in an evidence database supported by **Elasticsearch** for efficient retrieval. :contentReference[oaicite:13]{index=13}
+- **Structured Evaluation with ICRL-SumBench**: Introduces **ICRL-SumBench**, which provides structured Schema annotations with fine-grained spatio-temporal information and event logic to evaluate alignment, coherence, and grounding more precisely. :contentReference[oaicite:14]{index=14}:contentReference[oaicite:15]{index=15}
+- **Grounding-Oriented Rewards/Metrics**: Grounding is assessed via entailment-style signals (e.g., NLI-based grounding in the reward design), and alignment uses tIoU-style measurements in the framework. :contentReference[oaicite:16]{index=16}
 
 ## 📂 Project Structure
 
