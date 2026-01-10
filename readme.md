@@ -155,11 +155,11 @@ embeddings:
 If you find this code useful for your research, please cite our paper:
 
 ```bibtex
-@article{anonymous2025icrl,
+@article{anonymous2026icrl,
   title={ICRL-Sum: In-Context Reinforcement Learning for Grounded Video Summarization},
   author={Anonymous Authors},
   journal={Under Review},
-  year={2025}
+  year={2026}
 }
 ```
 
