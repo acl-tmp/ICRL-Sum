@@ -3,7 +3,7 @@
 [![License: Review-only](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c)](https://pytorch.org/)
-```text
+
 **Official (anonymized) implementation of "ICRL-Sum: In-Context Reinforcement Learning for Grounded Video Summarization".** 
 
 **ICRL-Sum** is a structure-aware, training-free **inference-time optimization** framework for video summarization. With model parameters frozen, it represents the summary as a **structured Schema** and performs **closed-loop iterative refinement** driven by Critic rewards and evidence-retrieval feedback to improve spatio-temporal alignment, event coherence, and hallucination grounding—without any parameter updates. 
