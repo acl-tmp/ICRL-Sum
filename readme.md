@@ -6,6 +6,10 @@
 
 **Official (anonymized) implementation of "ICRL-Sum: In-Context Reinforcement Learning for Grounded Video Summarization".** 
 
+**ICRL-Sum** is a training-free, inference-time optimization framework designed to generate grounded, coherent, and aligned video summaries. It leverages a hybrid architecture combining local multimodal perception ("The Eye") with remote large language model reasoning ("The Brain"), orchestrated by a reward-driven critic mechanism.
+
+---
+
 **ICRL-Sum** is a structure-aware, training-free **inference-time optimization** framework for video summarization. With model parameters frozen, it represents the summary as a **structured Schema** and performs **closed-loop iterative refinement** driven by Critic rewards and evidence-retrieval feedback to improve spatio-temporal alignment, event coherence, and hallucination grounding—without any parameter updates. 
 ---
 
