@@ -113,19 +113,23 @@ bash scripts/run_inference.sh
 Control model behavior via `configs/model.yaml`:
 
 ```yaml
+# configs/model.yaml
+
+# 1. The Brain (Reasoning)
 remote_llm:
   active_provider: "openai"
   openai:
-    model_name: "gpt-5"
+    model_name: "gpt-5-preview"
     temperature: 0.2
 
-# Visual evidence is textualized by a multimodal model (Gemini)
+# 2. The Eye (Visual Perception)
 visual_captioner:
   active_provider: "google"
   google:
-    model_name: "gemini"   
+    model_name: "gemini-3"
+    temperature: 0.1
 
-# Evidence embeddings used for retrieval
+# 3. Knowledge Base (Retrieval)
 embeddings:
   active_provider: "openai"
   openai:
