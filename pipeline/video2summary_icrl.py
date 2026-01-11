@@ -187,3 +187,4 @@ if __name__ == "__main__":
 
     runner = ICRLRunner(config)
     runner.run(args.input_merged, args.output_summary)
+ 
