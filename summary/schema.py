@@ -18,7 +18,7 @@ class TimeSpan(BaseModel):
             self.start, self.end = self.end, self.start
         return self
 
-    @property
+    @property 
     def duration(self):
         return self.end - self.start
 
