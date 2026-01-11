@@ -59,7 +59,7 @@ class TriAlignmentReward:
             "shot",
             "view",
             "camera",
-        ]
+        ] 
 
     def compute_reward(self, summary_json, source_context):
         if isinstance(summary_json, str):
