@@ -1,0 +1,82 @@
+# ==============================================================================
+# ICRL-Sum System Configuration
+# ==============================================================================
+
+global:
+  seed: 42
+  default_device: "cuda"
+  precision: "bf16"
+
+# ------------------------------------------------------------------------------
+# The Brain: Reasoning Agent (Base-LLM & Feedback-LLM)
+# ------------------------------------------------------------------------------
+remote_llm:
+  active_provider: "openai"
+  
+  openai:
+    model_name: "gpt-5-preview"
+    api_key: "" # Env: OPENAI_API_KEY
+    base_url: "https://api.openai.com/v1"
+    
+    # Robustness
+    max_retries: 5
+    timeout_sec: 120
+    
+    # Inference Params
+    generation:
+      temperature: 0.2
+      max_tokens: 8192
+      top_p: 0.95
+      frequency_penalty: 0.0
+      presence_penalty: 0.0
+
+# ------------------------------------------------------------------------------
+# The Eye: Visual Perception (Visual Evidence Extraction)
+# ------------------------------------------------------------------------------
+visual_captioner:
+  active_provider: "google"
+  
+  google:
+    model_name: "gemini-3"
+    api_key: "" # Env: GOOGLE_API_KEY
+    
+    # Safety Filters
+    safety_settings:
+      HARASSMENT: "BLOCK_NONE"
+      HATE_SPEECH: "BLOCK_NONE"
+      SEXUAL: "BLOCK_NONE"
+      DANGEROUS: "BLOCK_NONE"
+      
+    generation:
+      temperature: 0.1
+      top_k: 40
+      max_output_tokens: 4096
+
+  # Fallback: Local NPU/GPU
+  local:
+    model_path: "/data/models/Qwen2.5-VL-7B-Instruct"
+    backend: "transformers"
+    vision_config:
+      max_pixels: 1003520
+      fps: 1.0
+
+# ------------------------------------------------------------------------------
+# Knowledge Base: Vector Embeddings
+# ------------------------------------------------------------------------------
+embeddings:
+  active_provider: "openai"
+  
+  # Semantic Retrieval (Text/Visual Description)
+  openai:
+    model_name: "text-embedding-3-large"
+    api_key: ""
+    dimensions: 3072
+    batch_size: 100
+    encoding_format: "float"
+
+  # Acoustic Features (Always Local via Wav2Vec2)
+  audio_encoder:
+    model_name: "facebook/wav2vec2-base-960h"
+    sampling_rate: 16000
+    chunk_duration_s: 10.0
+    device: "cuda"
