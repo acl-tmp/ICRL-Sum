@@ -9,7 +9,12 @@
 **ICRL-Sum** is a structure-aware, training-free **inference-time optimization** framework for video summarization. With model parameters frozen, it represents the summary as a **structured Schema** and performs **closed-loop iterative refinement** driven by Critic rewards and evidence-retrieval feedback to improve spatio-temporal alignment, event coherence, and hallucination grounding—without any parameter updates. 
 
 ---
-
+<p align="center">
+  <img src="assets/framework.png" width="900" alt="ICRL-Sum framework overview">
+</p>
+<p align="center">
+  Figure: Overview of the ICRL-SumFramework.
+</p>
 
 ## 🚀 Key Features
 
