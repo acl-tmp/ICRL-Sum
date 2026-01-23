@@ -12,13 +12,11 @@ annotated-types==0.7.0
 antlr4-python3-runtime==4.9.3
 anyio==4.11.0
 argcomplete==3.6.3
-ascendebug @ file:///usr/local/Ascend/ascend-toolkit/8.0.RC3.alpha003/toolkit/tools/ascendebug-0.1.0-py3-none-any.whl#sha256=f9454d30c869e975d792e62af3eca89980a59e5f0912040ab6e29b53a6b4d321
 asttokens==3.0.0
 async-lru==2.0.5
 async-timeout==5.0.1
 attrs==24.3.0
 audioread==3.0.1
-auto_tune @ file:///root/selfgz8639824786/compiler/lib64/auto_tune-0.1.0-py3-none-any.whl#sha256=ae9983d76f147fae8fe205bcc994d0e2a70e67bb1ee2ff95daf204566be885f2
 av==15.1.0
 bcrypt==5.0.0
 beautifulsoup4==4.14.3
@@ -67,8 +65,6 @@ graphql-core==3.2.7
 greenlet==3.2.4
 h11==0.16.0
 h2==4.3.0
-hccl @ file:///root/selfgz1019881603/hccl/lib64/hccl-0.1.0-py3-none-any.whl#sha256=2a26aba0153bfd440aa42a172d75dc6d26cb36583731d7cd78dcd0b517b4ae14
-hccl_parser @ file:///usr/local/Ascend/ascend-toolkit/8.0.RC3.alpha003/toolkit/tools/hccl_parser-0.1-py3-none-any.whl#sha256=2ec50d89314aa253376d0bc45c5aa2e3b8865f729f6fbb8867e7c3a774411e18
 hf-xet==1.1.10
 hpack==4.1.0
 httpcore==1.0.9
@@ -118,7 +114,6 @@ motor==3.6.1
 moviepy==2.2.1
 mpmath==1.3.0
 msgpack==1.1.2
-msobjdump @ file:///usr/local/Ascend/ascend-toolkit/8.0.RC3.alpha003/toolkit/tools/msobjdump-0.1.0-py3-none-any.whl#sha256=1a6ee561890841c78043406a58d4e4b097e05e408a2ffb9aa7e66fe38c1ee8de
 multidict==6.7.0
 multiprocess==0.70.15
 multivolumefile==0.2.3
@@ -130,8 +125,6 @@ numba==0.60.0
 numpy==2.0.2
 omegaconf==2.3.0
 op_compile_tool @ file:///root/selfgz8639824786/compiler/lib64/op_compile_tool-0.1.0-py3-none-any.whl#sha256=7ee6e93760b5188a9818e0897ca8bf89b70849449c771a934f25406ea67c4d42
-op_gen @ file:///usr/local/Ascend/ascend-toolkit/8.0.RC3.alpha003/toolkit/tools/op_gen-0.1-py3-none-any.whl#sha256=198c1c35d1221ed97de04517a8a45ef720f8c500e81277f652867e965f3b1abe
-op_test_frame @ file:///usr/local/Ascend/ascend-toolkit/8.0.RC3.alpha003/toolkit/tools/op_test_frame-0.1-py3-none-any.whl#sha256=533a7b431c2a006a5ec0768838f73b43055522dbfe4ce190c28ba19fcd0e9b1b
 opc_tool @ file:///root/selfgz8639824786/compiler/lib64/opc_tool-0.1.0-py3-none-any.whl#sha256=7cd61c36dfef80512a696a318af07920a6fbb1d2e96d0b0d25508fbac246490b
 openai-whisper==20250625
 opencv-python==4.12.0.88
@@ -197,7 +190,6 @@ scikit-image==0.24.0
 scikit-learn==1.6.1
 scipy==1.13.1
 sentencepiece==0.2.1
-show_kernel_debug_data @ file:///usr/local/Ascend/ascend-toolkit/8.0.RC3.alpha003/toolkit/tools/show_kernel_debug_data-0.1.0-py3-none-any.whl#sha256=770085e5a1bb06c2f9708499187d05c043e087e71ee0f42b71e4fc6a25f849f6
 six==1.17.0
 sniffio==1.3.1
 sortedcontainers==2.4.0
