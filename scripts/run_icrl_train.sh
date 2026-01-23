@@ -21,7 +21,7 @@ OUTPUT_SUMMARIES="/data/project/output/summaries/train_trajectories"
 TRAJECTORY_LOGS="/data/project/output/logs/trajectories"
 
 # --- Hyperparameters ---
-MODEL_NAME="gpt-4o"  # or "gpt-5-preview", "gemini-1.5-pro"
+MODEL_NAME="gpt-4o"  # or "gpt-5-preview", "gemini-3"
 MAX_ITERS=3          # K_max
 REWARD_THRESH=0.85
 
@@ -59,3 +59,4 @@ find "$PROCESSED_ROOT" -name "5_merged_windows.json" | while read input_json; do
 done
 
 echo ">>> [ICRL-Train] Optimization Cycle Complete."
+
